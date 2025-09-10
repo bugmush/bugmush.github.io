@@ -2,31 +2,39 @@
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
 html {
-  background-image: url("bugmushtiling-real.png");
+  
 }
    
 @font-face {
   font-family: "Grandstander";
-    src: url("Grandstander-Bold.ttf") format("truetype"),
+    src: url("CossetteTitre-Regular.ttf") format("truetype"),
+}
+
+
+h1 {
+  background-color: #000000;
+  backdrop-filter: blur(0px);
+  color: #ffe200;
+  font-family: "Grandstander", Verdana;
 }
 
 body {
-  background-color: #ffffffbb;
-  backdrop-filter: blur(1px);
-  color: black;
+  background-color: #000000;
+  backdrop-filter: blur(0px);
+  color: #ffe200;
   font-family: "Grandstander", Verdana;
 }
 
 .image-box, .cards-box {
   width: max-content;
-  margin: 3em auto 3em auto;
+  margin: 0em auto 0em auto;
 }
 
 .text-box {
-  background-color: #303030cc;
-  border: 8px solid #333030;
-  border-radius: 20px;
-  padding: 2em;
+  background-color: #000000;
+  border: 0px solid #000000;
+  border-radius: 0px;
+  padding: 1em;
   width: max-content;
   text-align: center;
   margin: auto;
@@ -37,4 +45,20 @@ body {
 
 a {
   color: #ffe200;
+}
+
+a:link {
+      text-decoration: none;
+}
+
+a:visited {
+      text-decoration: none;
+}
+
+a:hover {
+      text-decoration: none;
+}
+
+a:active {
+      text-decoration: none;
 }
