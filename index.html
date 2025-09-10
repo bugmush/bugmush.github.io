@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bugmush</title>
-    <!--<link rel="icon" type="image/png" href="../assets/images/lilguy.png" /> --> 
+    <!--<link rel="icon" type="image/png" href="assets/images/lilguy.png"/>-->
     <!--this adds a favicon but i kinda prefer it without -jem--> 
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
+    <canvas id="buggyCanvas" style="position: fixed; top: 0; left: 0; pointer-events: none; display: none;"></canvas>
     <div class="text-box">
       <div class="image-box">
-      <img class="buggyspin" src="../assets/images/lilguy.png" alt="Bugmush logo" width="100" style="animation-name: spin;"/>
+      <img class="buggyspin" src="assets/images/lilguy.png" alt="Bugmush logo" width="100" style="animation-name: spin;"/>
     </div>
       <h1>
         bugmush is a tgirl girl band
@@ -20,11 +21,10 @@
         <span style="color: #ffffff;">one4u out now</span>
         <br>
         <video controls width="600">
-        <source src="../assets/video/one4u.mp4" type="video/mp4"/>
-      </h1> 
+        <source src="assets/video/one4u.mp4" type="video/mp4"/>
+      </h1>
       
-      <h2>      
-        
+      <h2>
         <a href="https://tidal.com/browse/artist/62227352" target="_blank" > tidal</a> 
         <br>
         <a href="https://www.youtube.com/channel/UCKq1SzAJpfCml8j1YzrzNVA" target="_blank" > youtube</a>
@@ -35,13 +35,10 @@
         <br>
         <a href="https://open.spotify.com/artist/0zs7OTUel5y1h6HIVaKtnk?si=d0_sEt8fTVqG7OhJbdQlqg" target="_blank" > spotify</a>
         <br> <br>
-
-
         <a href="https://youtu.be/9Ng_Olt0Jpo?si=i-I8vBwJL0PmL5Fe" target="_blank"> crashout visualiser </a>
         <br> <br>
         <a href="https://stemmy.versary.town/a/bugmush/" target="_blank" > bugmush stems </a>
         <br>
-
       </h2>
     </div>
       
@@ -49,13 +46,10 @@
 
  <footer>
     <div class="cards-box">
-    
-    
-    
+
       <a href="https://bugmu.sh/" target="_blank">
       <img src="https://fuckitimjem.neocities.org/icons/badges/bugmush.png" width="88" height="31"/> 
       </a> 
-      
       <a href="https://fuckitimjem.neocities.org" target="_blank"> 
       <img src="https://fuckitimjem.neocities.org/icons/badges/jem.gif" width="88" height="31"/> 
       </a>
@@ -107,5 +101,6 @@
       
     </div>
   </footer>
+  <script src="code/bugspawn.js"></script>
   </body>
 </html>
