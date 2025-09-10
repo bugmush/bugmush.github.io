@@ -15,6 +15,13 @@ h1 {
   font-family: "CossetteTitre";
 }
 
+h2 {
+  background-color: #000000;
+  backdrop-filter: blur(0px);
+  color: #ffe200;
+  font-family: "CossetteTitre";
+}
+
 body {
   background-color: #000000;
   backdrop-filter: blur(0px);
