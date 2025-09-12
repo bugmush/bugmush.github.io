@@ -1,50 +1,55 @@
-@font-face {
-  font-family: "CossetteTitre";
-    src: url("../assets/fonts/CossetteTitre-Regular.ttf") format("truetype"),
+
+/* storing colors as variables for easy editing. use var(--colour_name) to reference */
+:root {
+  --bug_yellow: #ffe200;
+  --black: #000000;
 }
 
+@font-face {
+  font-family: "CossetteTitre";
+    src: url("assets/fonts/CossetteTitre-Regular.ttf") format("truetype"),
+}
 
 h1 {
-  background-color: #000000;
   backdrop-filter: blur(0px);
-  color: #ffe200;
+  color: var(--bug_yellow);
   font-family: "CossetteTitre";
 }
 
 h2 {
-  background-color: #000000;
   backdrop-filter: blur(0px);
-  color: #ffe200;
+  color: var(--bug_yellow);
   font-family: "CossetteTitre";
 }
 
 body {
-  background-color: #000000;
+  background-color: var(--black);
   backdrop-filter: blur(0px);
-  color: #ffe200;
+  color: var(--bug_yellow);
   font-family: "CossetteTitre";
 }
 
 .image-box, .cards-box {
   width: max-content;
   margin: 0em auto 0em auto;
+  position: relative;
+  z-index: 10;
 }
 
 .text-box {
-  background-color: #000000;
-  border: 0px solid #000000;
-  border-radius: 0px;
   padding: 1em;
   width: max-content;
   text-align: center;
   margin: auto;
+  position: relative;
+  z-index: 10;
 }
 .text-box br {
   margin-bottom: 0.5em;
 }
 
 a {
-  color: #ffe200;
+  color: var(--bug_yellow);
 }
 
 a:link {
@@ -64,6 +69,40 @@ a:active {
       text-decoration: none;
 }
 
+/* Text selection highlight color */
+::selection {
+  background-color: var(--bug_yellow);
+  color: var(--black);
+}
+
+::-moz-selection {
+  background-color: var(--bug_yellow);
+  color: var(--black);
+}
+
+/* scrollbar styling */
+/* scrollbars can be a little fucky, if this doesn't work on your browser it's probably safer to remove */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bug_yellow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+/* firefox scrollbar implementation */
+html {
+  scrollbar-color: var(--bug_yellow) var(--black);
+  scrollbar-width: thin;
+}
 
 /* BUGGYSPIN!!! */
 img.buggyspin {
@@ -73,3 +112,12 @@ img.buggyspin:hover {
   transform: rotate(180deg) scale(1.3,1.3);
 }
 
+/* canvas for buggy trail effect */
+#buggyCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
